@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Administrator\Desktop\HWindow_Tool.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3F5E218-396A-4A32-88F5-1F0FDC4993D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>HWindowTool</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>HWindowTool</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="halcondotnet, Version=12.0.0.0, Culture=neutral, PublicKeyToken=4973bed59ddbf2b8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewROI\Config\HObjectWithColor.cs" />
+    <Compile Include="ViewROI\Properties\Resources.cs" />
+    <Compile Include="ViewROI\Properties\Settings.cs" />
+    <Compile Include="ViewWindow\Config\Circle2.cs" />
+    <Compile Include="ViewWindow\Model\ROICircle2.cs" />
+    <Compile Include="ViewWindow\ViewWindow.cs" />
+    <Compile Include="ViewWindow\Config\Circle.cs" />
+    <Compile Include="ViewWindow\Config\Line.cs" />
+    <Compile Include="ViewWindow\Config\Rectangle1.cs" />
+    <Compile Include="ViewWindow\Config\Rectangle2.cs" />
+    <Compile Include="ViewWindow\Config\SerializeHelper.cs" />
+    <Compile Include="ViewWindow\Model\GCDelegate.cs" />
+    <Compile Include="ViewWindow\Model\GraphicsContext.cs" />
+    <Compile Include="ViewWindow\Model\HObjectEntry.cs" />
+    <Compile Include="ViewWindow\Model\IconicDelegate.cs" />
+    <Compile Include="ViewWindow\Model\FuncDelegate.cs" />
+    <Compile Include="ViewWindow\Model\HWndCtrl.cs" />
+    <Compile Include="ViewWindow\Model\IViewWindow.cs" />
+    <Compile Include="ViewWindow\Model\ROI.cs" />
+    <Compile Include="ViewWindow\Model\ROICircle.cs" />
+    <Compile Include="ViewWindow\Model\FuncROIDelegate.cs" />
+    <Compile Include="ViewWindow\Model\ROIController.cs" />
+    <Compile Include="ViewWindow\Model\RoiData.cs" />
+    <Compile Include="ViewWindow\Model\ROILine.cs" />
+    <Compile Include="ViewWindow\Model\ROIRectangle1.cs" />
+    <Compile Include="ViewWindow\Model\ROIRectangle2.cs" />
+    <Compile Include="ChoiceTech\Halcon\Control\HWindow_Final.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChoiceTech\Halcon\Control\HWindow_Final.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewROI\Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PicturesIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableIcon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
